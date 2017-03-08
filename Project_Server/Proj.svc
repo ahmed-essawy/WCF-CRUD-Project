@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Service="Project_Server.ProjService" %>
