@@ -11,16 +11,20 @@ namespace Project_Server
 
         public bool AddDepartment(Department dept)
         {
+            bool done = false;
             DB.Departments.Add(dept);
-            DB.SaveChanges();
-            return true;
+            if (DB.SaveChanges() > 0)
+                done = true;
+            return done;
         }
 
         public bool AddEmployee(Employee emp)
         {
+            bool done = false;
             DB.Employees.Add(emp);
-            DB.SaveChanges();
-            return true;
+            if (DB.SaveChanges() > 0)
+                done = true;
+            return done;
         }
 
         public List<Department> GetAllDepartments()
@@ -63,37 +67,57 @@ namespace Project_Server
 
         public bool RemoveDepartment(string ID)
         {
+            bool done = false;
             Department temp_dept = DB.Departments.ToList().Find(dept => dept.ID == int.Parse(ID));
-            DB.Departments.Remove(temp_dept);
-            DB.SaveChanges();
-            return true;
+            if (temp_dept != null)
+            {
+                DB.Departments.Remove(temp_dept);
+                if (DB.SaveChanges() > 0)
+                    done = true;
+            }
+            return done;
         }
 
         public bool RemoveEmployee(string SSN)
         {
+            bool done = false;
             Employee temp_emp = DB.Employees.ToList().Find(emp => emp.SSN == int.Parse(SSN));
-            DB.Employees.Remove(temp_emp);
-            DB.SaveChanges();
-            return true;
+            if (temp_emp != null)
+            {
+                DB.Employees.Remove(temp_emp);
+                if (DB.SaveChanges() > 0)
+                    done = true;
+            }
+            return done;
         }
 
         public bool UpdateDepartment(string ID, string name)
         {
+            bool done = false;
             Department temp_dept = DB.Departments.ToList().Find(tdept => tdept.ID == int.Parse(ID));
-            temp_dept.Name = name;
-            DB.SaveChanges();
-            return true;
+            if (temp_dept != null)
+            {
+                temp_dept.Name = name;
+                if (DB.SaveChanges() > 0)
+                    done = true;
+            }
+            return done;
         }
 
         public bool UpdateEmployee(Employee emp, string SSN)
         {
+            bool done = false;
             Employee temp_emp = DB.Employees.ToList().Find(temp => temp.SSN == int.Parse(SSN));
-            temp_emp.Name = emp.Name;
-            temp_emp.Phone = emp.Phone;
-            temp_emp.Salary = emp.Salary;
-            temp_emp.DP_ID = emp.DP_ID;
-            DB.SaveChanges();
-            return true;
+            if (temp_emp != null)
+            {
+                temp_emp.Name = emp.Name;
+                temp_emp.Phone = emp.Phone;
+                temp_emp.Salary = emp.Salary;
+                temp_emp.DP_ID = emp.DP_ID;
+                if (DB.SaveChanges() > 0)
+                    done = true;
+            }
+            return done;
         }
     }
 }
