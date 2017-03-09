@@ -25,12 +25,16 @@ namespace Project_Server
 
         public List<Department> GetAllDepartments()
         {
-            return DB.Departments.ToList();
+            List<Department> temp_list = new List<Department>();
+            temp_list.AddRange(DB.Departments.ToList());
+            return temp_list;
         }
 
         public List<Employee> GetAllEmployees()
         {
-            return DB.Employees.ToList();
+            List<Employee> temp_list = new List<Employee>();
+            temp_list.AddRange(DB.Employees.ToList());
+            return temp_list;
         }
 
         public Department GetDepartmentByID(string ID)
@@ -47,6 +51,14 @@ namespace Project_Server
         public Employee GetEmployeeByID(string SSN)
         {
             return DB.Employees.ToList().Find(emp => emp.SSN == int.Parse(SSN));
+        }
+
+        public List<Employee> GetEmployeesinDept(string ID)
+        {
+            List<Employee> temp_list = new List<Employee>();
+            Department temp_dept = DB.Departments.ToList().Find(dept => dept.ID == int.Parse(ID));
+            temp_list.AddRange(DB.Employees.ToList().FindAll(emp => emp.DP_ID == temp_dept.ID));
+            return temp_list;
         }
 
         public bool RemoveDepartment(string ID)

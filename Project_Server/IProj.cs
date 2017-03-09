@@ -20,6 +20,10 @@ namespace Project_Server
         [OperationContract]
         Employee GetEmployeeByID(string SSN);
 
+        [WebGet(UriTemplate = "Employees?Dept={ID}")]
+        [OperationContract]
+        List<Employee> GetEmployeesinDept(string ID);
+
         [WebInvoke(Method = "POST", UriTemplate = "Employee")]
         [OperationContract]
         bool AddEmployee(Employee emp);
