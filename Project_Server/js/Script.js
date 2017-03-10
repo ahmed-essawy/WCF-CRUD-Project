@@ -102,7 +102,7 @@ function EmployeeEmptyRow(len) {
     $("#EmployeeTable tbody").append("<tr id='" + len + "' class='new'>\
                 <th><input type='text' value='" + len + "' readonly></th><th><input type='text'></th>\
                 <th><input type='text'></th><th><input type='text'></th>\
-                <th><select></select></th><th><select class='country'></select></th><th><input type='text'></th>\
+                <th><select></select></th><th><select class='country'></select></th><th><input type='text' disabled></th>\
                 <th colspan='2'><button onclick='InsertEmployee("+ len + ")' style='width:100%'>Add</button></th></tr>");
     GetDepartmentsofEmp(0, len);
     GetCountry(len);
