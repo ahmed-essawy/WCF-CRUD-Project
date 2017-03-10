@@ -126,6 +126,7 @@
             // 
             // textBox_Name
             // 
+            this.textBox_Name.Enabled = false;
             this.textBox_Name.Location = new System.Drawing.Point(129, 79);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(270, 22);
@@ -133,6 +134,7 @@
             // 
             // textBox_Phone
             // 
+            this.textBox_Phone.Enabled = false;
             this.textBox_Phone.Location = new System.Drawing.Point(129, 118);
             this.textBox_Phone.Name = "textBox_Phone";
             this.textBox_Phone.Size = new System.Drawing.Size(270, 22);
@@ -140,6 +142,7 @@
             // 
             // textBox_Salary
             // 
+            this.textBox_Salary.Enabled = false;
             this.textBox_Salary.Location = new System.Drawing.Point(129, 157);
             this.textBox_Salary.Name = "textBox_Salary";
             this.textBox_Salary.Size = new System.Drawing.Size(270, 22);
@@ -147,6 +150,7 @@
             // 
             // textBox_Deparment
             // 
+            this.textBox_Deparment.Enabled = false;
             this.textBox_Deparment.Location = new System.Drawing.Point(129, 196);
             this.textBox_Deparment.Name = "textBox_Deparment";
             this.textBox_Deparment.Size = new System.Drawing.Size(270, 22);
@@ -187,7 +191,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(480, 324);
+            this.tabPage2.Size = new System.Drawing.Size(480, 383);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -295,6 +299,7 @@
             // 
             // textBox_SSN
             // 
+            this.textBox_SSN.Enabled = false;
             this.textBox_SSN.Location = new System.Drawing.Point(129, 39);
             this.textBox_SSN.Name = "textBox_SSN";
             this.textBox_SSN.Size = new System.Drawing.Size(270, 22);
