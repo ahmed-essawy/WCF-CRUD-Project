@@ -51,6 +51,7 @@
             this.comboBox_Emp.Name = "comboBox_Emp";
             this.comboBox_Emp.Size = new System.Drawing.Size(320, 21);
             this.comboBox_Emp.TabIndex = 4;
+            this.comboBox_Emp.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -172,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 272);
+            this.ClientSize = new System.Drawing.Size(375, 277);
             this.Controls.Add(this.comboBox_Emp);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
