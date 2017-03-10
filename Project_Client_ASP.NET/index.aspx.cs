@@ -39,6 +39,11 @@ namespace Project_Client_ASP.NET
             return client.GetAllEmployees().Last().SSN + 1;
         }
 
+        public int LastID()
+        {
+            return client.GetAllDepartments().Last().ID + 1;
+        }
+
         protected void EmployeeTable_RowEditing(object sender, GridViewEditEventArgs e)
         {
             EmployeeTable.EditIndex = e.NewEditIndex;
@@ -78,7 +83,7 @@ namespace Project_Client_ASP.NET
             EmployeeTable.DataBind();
         }
 
-        protected void Add_Click(object sender, EventArgs e)
+        protected void Add_Emp(object sender, EventArgs e)
         {
             string SSN = ((Label)EmployeeTable.FooterRow.Cells[1].FindControl("Label1")).Text;
             ProjRef.Employee temp_emp = new ProjRef.Employee
@@ -90,9 +95,54 @@ namespace Project_Client_ASP.NET
                 Department = int.Parse(((DropDownList)EmployeeTable.FooterRow.Cells[5].FindControl("DropDownList1")).SelectedValue)
             };
             client.AddEmployee(temp_emp);
-            EmployeeTable.EditIndex = -1;
             EmployeeTable.DataSource = client.GetAllEmployees();
             EmployeeTable.DataBind();
+        }
+
+        protected void DepartmentTable_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            DepartmentTable.EditIndex = -1;
+            DepartmentTable.DataSource = client.GetAllDepartments();
+            DepartmentTable.DataBind();
+        }
+
+        protected void DepartmentTable_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string ID = ((Label)DepartmentTable.Rows[e.RowIndex].Cells[0].FindControl("Label1")).Text;
+
+            client.RemoveDepartment(ID);
+            DepartmentTable.DataSource = client.GetAllDepartments();
+            DepartmentTable.DataBind();
+        }
+
+        protected void DepartmentTable_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            DepartmentTable.EditIndex = e.NewEditIndex;
+            DepartmentTable.DataSource = client.GetAllDepartments();
+            DepartmentTable.DataBind();
+        }
+
+        protected void DepartmentTable_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            string ID = ((Label)DepartmentTable.Rows[e.RowIndex].Cells[0].FindControl("Label1")).Text;
+            string Name = ((TextBox)DepartmentTable.Rows[e.RowIndex].Cells[0].FindControl("TextBox1")).Text;
+            client.UpdateDepartment(ID, Name);
+            DepartmentTable.EditIndex = -1;
+            DepartmentTable.DataSource = client.GetAllDepartments();
+            DepartmentTable.DataBind();
+        }
+
+        protected void Add_Dept(object sender, EventArgs e)
+        {
+            string ID = ((Label)DepartmentTable.FooterRow.Cells[0].FindControl("Label1")).Text;
+            ProjRef.Department temp_dept = new ProjRef.Department
+            {
+                ID = int.Parse(ID),
+                Name = ((TextBox)DepartmentTable.FooterRow.Cells[0].FindControl("TextBox1")).Text
+            };
+            client.AddDepartment(temp_dept);
+            DepartmentTable.DataSource = client.GetAllDepartments();
+            DepartmentTable.DataBind();
         }
     }
 }

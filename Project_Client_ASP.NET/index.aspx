@@ -68,7 +68,7 @@
                     <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" ButtonType="Button" InsertVisible="False" />
                     <asp:TemplateField>
                         <FooterTemplate>
-                            <asp:Button ID="Add" runat="server" Text="Add" Width=120px OnClick="Add_Click" />
+                            <asp:Button runat="server" Text="Add" Width=120px OnClick="Add_Emp" />
                         </FooterTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -77,17 +77,28 @@
         </div>
         <div>
             <h2>Departments</h2>
-            <asp:GridView ID=DepartmentTable runat="server" AutoGenerateColumns="False" AllowSorting="True" ShowFooter="True" ShowHeaderWhenEmpty="True">
+            <asp:GridView ID=DepartmentTable runat="server" AutoGenerateColumns="False" AllowSorting="True" ShowFooter="True" ShowHeaderWhenEmpty="True" OnRowCancelingEdit="DepartmentTable_RowCancelingEdit" OnRowDeleting="DepartmentTable_RowDeleting" OnRowEditing="DepartmentTable_RowEditing" OnRowUpdating="DepartmentTable_RowUpdating">
                 <Columns>
                     <asp:TemplateField HeaderText="Name">
+                        <EditItemTemplate>
+                            <asp:Label ID="Label1" runat="server" Text="<%# Bind('ID') %>" Visible="false"></asp:Label>
+                            <asp:TextBox ID="TextBox1" runat="server" Text="<%# Bind('Name') %>"></asp:TextBox>
+                        </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox ID="TextBox2" runat="server" Text="<%# Bind('Name') %>"></asp:TextBox>
+                            <asp:Label ID="Label1" runat="server" Text="<%# LastID() %>" Visible="false"></asp:Label>
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                         </FooterTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="Label1" runat="server" Text="<%# Bind('Name') %>"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="<%# Bind('ID') %>" Visible="false"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text="<%# Bind('Name') %>"></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" ButtonType="Button" />
+                    <asp:TemplateField>
+                        <FooterTemplate>
+                            <asp:Button runat="server" Text="Add" Width=120px OnClick="Add_Dept" />
+                        </FooterTemplate>
+                    </asp:TemplateField>
                 </Columns>
                 <FooterStyle CssClass="new" />
             </asp:GridView>
