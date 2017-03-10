@@ -13,7 +13,3 @@ Groups: 4
 - Clients
 	A- .NET Client (Web Application)
 	B- JS Client + (Display Capital of any Country) + CSS
-
-
-
-
