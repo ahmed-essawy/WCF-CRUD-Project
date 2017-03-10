@@ -1,0 +1,55 @@
+﻿body {
+    text-align: center;
+    background: #eee url(http://i.imgur.com/eeQeRmk.png);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+table {
+    margin: auto;
+}
+
+thead {
+    cursor: pointer;
+    background: #c9dff0;
+}
+
+    thead th {
+        padding: 12px 0;
+    }
+
+tbody tr:hover th {
+    background: cadetblue;
+}
+
+tbody .new:hover th {
+    background: transparent;
+}
+
+input[type=text], select {
+    height: 30px;
+    width: 120px;
+    background: transparent;
+    text-align: center;
+    border: 0;
+    font-size: 12px;
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+.new input[type=text], .new select {
+    background: lightgrey;
+    color: black;
+}
+
+form input, form button {
+    width: 500px !important;
+    margin: 3px
+}
+
+button {
+    height: 30px;
+    width: 75px;
+    background: #585858;
+    color: white;
+    font-weight: bold;
+}
