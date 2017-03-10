@@ -3,13 +3,13 @@ Project:
 DeadLine: 10 March 2017
 Groups: 4
 - Implement Service over CRrUD operations for TWO tables from Database (Use Entity Framework)
-	A- Endpoints:
+	=>Done A- Endpoints:
 		i  - TCP 
 		ii - IPC
 		iii- wsHttp
 		iv - REST	
-	B- Hosting on IIS
+	=>Done B- Hosting on IIS
 
 - Clients
-	A- .NET Client (Web Application)
-	B- JS Client + (Display Capital of any Country) + CSS
+	=>Done A- .NET Client (Web Application)
+	=>Done B- JS Client + (Display Capital of any Country) + CSS
