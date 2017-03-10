@@ -8,7 +8,7 @@ $('document').ready(function () {
 function GetEmployees() {
     $.ajax({
         method: "GET",
-        url: "/Proj.svc/Proj/REST/Employees",
+        url: "http://localhost:83/Proj.svc/Proj/REST/Employees",
         dataType: "json"
     }).then(function (response) {
         var last_index = 0;
@@ -30,7 +30,7 @@ function GetEmployees() {
 function GetDepartmentsofEmp(ID, index) {
     $.ajax({
         method: "GET",
-        url: "/Proj.svc/Proj/REST/Departments",
+        url: "http://localhost:83/Proj.svc/Proj/REST/Departments",
         dataType: "json"
     }).then(function (response) {
         for (var i = 0; i < response.length; i++) {
@@ -44,7 +44,7 @@ function GetDepartmentsofEmp(ID, index) {
 function DeleteEmployee(SSN) {
     $.ajax({
         method: "DELETE",
-        url: "/Proj.svc/Proj/REST/Employee/" + SSN
+        url: "http://localhost:83/Proj.svc/Proj/REST/Employee/" + SSN
     }).then(function (response) {
         $("#EmployeeTable #" + SSN).remove();
     })
@@ -59,7 +59,7 @@ function UpdateEmployee(SSN) {
     };
     $.ajax({
         method: "PUT",
-        url: "/Proj.svc/Proj/REST/Employee/" + SSN,
+        url: "http://localhost:83/Proj.svc/Proj/REST/Employee/" + SSN,
         dataType: "json",
         contentType: "application/json",
         data: JSON.stringify(emp)
@@ -79,7 +79,7 @@ function InsertEmployee(SSN) {
     };
     $.ajax({
         method: "POST",
-        url: "/Proj.svc/Proj/REST/Employee",
+        url: "http://localhost:83/Proj.svc/Proj/REST/Employee",
         dataType: "json",
         contentType: "application/json",
         data: JSON.stringify(emp)
@@ -117,7 +117,7 @@ function EmployeeEmptyRow(len) {
 function GetDepartments() {
     $.ajax({
         method: "GET",
-        url: "/Proj.svc/Proj/REST/Departments",
+        url: "http://localhost:83/Proj.svc/Proj/REST/Departments",
         dataType: "json"
     }).then(function (response) {
         var last_index = 0;
@@ -134,7 +134,7 @@ function GetDepartments() {
 function DeleteDepartment(ID) {
     $.ajax({
         method: "DELETE",
-        url: "/Proj.svc/Proj/REST/Department/" + ID
+        url: "http://localhost:83/Proj.svc/Proj/REST/Department/" + ID
     }).then(function (response) {
         $("#DepartmentTable #" + ID).remove();
     })
@@ -143,7 +143,7 @@ function UpdateDepartment(ID) {
     var name = $("#DepartmentTable #" + ID + " > th:nth-child(1) > input[type='text']").val();
     $.ajax({
         method: "PUT",
-        url: "/Proj.svc/Proj/REST/Department/" + ID,
+        url: "http://localhost:83/Proj.svc/Proj/REST/Department/" + ID,
         dataType: "json",
         contentType: "application/json",
         data: JSON.stringify(name)
@@ -159,7 +159,7 @@ function InsertDepartment(ID) {
     };
     $.ajax({
         method: "POST",
-        url: "/Proj.svc/Proj/REST/Department",
+        url: "http://localhost:83/Proj.svc/Proj/REST/Department",
         dataType: "json",
         contentType: "application/json",
         data: JSON.stringify(dept)
