@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7076c9d3-1f85-43fc-b923-dd9f09843469" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:83/Proj.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProjService.wsdl" MetadataType="Wsdl" ID="832ff6ae-5991-4d92-8b94-3a9b73695062" SourceId="1" SourceUrl="http://ahmed-laptop:83/Proj.svc/WSDL?wsdl" />
+    <MetadataFile FileName="WSDL.xsd" MetadataType="Schema" ID="943aa1e4-104b-4e75-a1a0-67070c697bac" SourceId="1" SourceUrl="http://ahmed-laptop:83/Proj.svc/WSDL?xsd=xsd0" />
+    <MetadataFile FileName="WSDL1.xsd" MetadataType="Schema" ID="67298662-94d3-4a5e-b7c8-a2e3e31cf4c9" SourceId="1" SourceUrl="http://ahmed-laptop:83/Proj.svc/WSDL?xsd=xsd1" />
+    <MetadataFile FileName="WSDL2.xsd" MetadataType="Schema" ID="4816669d-361f-4a6f-b9a2-e98514ba69d3" SourceId="1" SourceUrl="http://ahmed-laptop:83/Proj.svc/WSDL?xsd=xsd2" />
+    <MetadataFile FileName="WSDL.disco" MetadataType="Disco" ID="21d11f1c-804b-4205-8e81-2cae7da854c7" SourceId="1" SourceUrl="http://ahmed-laptop:83/Proj.svc/WSDL?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

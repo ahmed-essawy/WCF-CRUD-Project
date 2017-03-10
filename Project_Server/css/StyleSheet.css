@@ -36,7 +36,7 @@ input[type=text], select {
     font-weight: bold;
 }
 
-.new input[type=text], .new select {
+.new {
     background: lightgrey;
     color: black;
 }

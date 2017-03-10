@@ -5,6 +5,9 @@
 }
 
 table {
+    border-collapse: separate !important;
+    border-spacing: 2px;
+    border-color: grey;
     margin: auto;
 }
 
@@ -17,11 +20,21 @@ thead {
         padding: 12px 0;
     }
 
-tbody tr:hover th {
+tbody td {
+    height: 30px;
+    min-width: 120px;
+    background: transparent;
+    text-align: center;
+    font-size: 12px;
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+tbody tr:hover td {
     background: cadetblue;
 }
 
-tbody .new:hover th {
+tbody .new:hover td {
     background: transparent;
 }
 
@@ -41,7 +54,7 @@ input[type=text], select {
     color: black;
 }
 
-button {
+input[type="button"], input[type="submit"], button {
     height: 30px;
     width: 75px;
     background: #585858;
