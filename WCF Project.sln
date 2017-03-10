@@ -7,7 +7,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Server", "Project_S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Client_ASP.NET", "Project_Client_ASP.NET\Project_Client_ASP.NET.csproj", "{E75AF212-C8F5-44E2-B820-208F450BC6E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Client_WinForm", "Project_Client_WinForm\Project_Client_WinForm.csproj", "{F9744954-9C66-484B-BF57-AD703E5877DE}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Project_Client_JS", "Project_Client_JS\", "{EF389CEC-8900-4249-A078-44231B3B6EFA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50175"
+		Debug.AspNetCompiler.PhysicalPath = "Project_Client_JS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50175\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50175"
+		Release.AspNetCompiler.PhysicalPath = "Project_Client_JS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50175\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50175"
+		SlnRelativePath = "Project_Client_JS\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Client_WinForm", "Project_Client_WindowsForm\Project_Client_WinForm.csproj", "{F9744954-9C66-484B-BF57-AD703E5877DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +44,10 @@ Global
 		{E75AF212-C8F5-44E2-B820-208F450BC6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E75AF212-C8F5-44E2-B820-208F450BC6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E75AF212-C8F5-44E2-B820-208F450BC6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF389CEC-8900-4249-A078-44231B3B6EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF389CEC-8900-4249-A078-44231B3B6EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF389CEC-8900-4249-A078-44231B3B6EFA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF389CEC-8900-4249-A078-44231B3B6EFA}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{F9744954-9C66-484B-BF57-AD703E5877DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F9744954-9C66-484B-BF57-AD703E5877DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9744954-9C66-484B-BF57-AD703E5877DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
